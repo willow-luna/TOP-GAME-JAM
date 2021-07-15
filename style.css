@@ -1,5 +1,5 @@
 body{
-  background-color: black;  
+  background-color: rgba(141, 142, 160, 0.945);  
 }
 header{
     background-color: aqua;
@@ -16,5 +16,22 @@ header{
   text-align: center;
   padding-right: 30px;
   padding-left: 30px;
+
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color:rgba(70, 230, 30, 0.945);
+  padding: 20px;
+}
+
+.grid-item{
+  background-color: rgba(205, 245, 140, 0.993);
+  border: 1px solid rgba(31, 32, 37, 0.945);
+  padding: 30px;
+  font-size: 30px;
+  text-align: center;
   
 }
+

@@ -6,8 +6,58 @@ header{
     padding: 20px;
 }
 
+.answer-numbers{
+  border: 1px solid rgba(169, 211, 15, 0.89);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
 
+.answer-screen{
+  width: 100%;
+  font-size: 5rem;
+  height: 80px;
+  border: seagreen;
+  background-color: seashell;
+  color: rgba(49, 33, 3, 0.712);
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 10px;
+}
 
+button {
+  height: 60px;
+  background-color:aquamarine;
+  border-radius: 3px;
+  border: 1px solid rgba(50, 21, 212, 0.815);
+  background-color: transparent;
+  font-size: 2rem;
+  color: rgba(244, 248, 10, 0.9);
+  background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(87, 184, 230, 0.9));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(42, 177, 148, 0.9), inset 0 -1px 0 0 rgba(169, 211, 15, 0.89), 0 1px 0 0 rgba(117, 112, 112, 0.712);
+  text-shadow: 0 1px rgb(198, 229, 241);
+}
+
+button:hover {
+  background-color: #eaeaea;
+}
+
+  .Restart {
+    background-color: rgb(244, 247, 75);
+    border-color: rgba(250, 205, 6, 0.89);
+    color: rgb(233, 102, 200);
+  }
+
+  .Restart:hover {
+    background-color: rgba(184, 124, 240, 0.979);
+  }
+  
+  .numbers {
+    display: grid;
+  }
 
 
 

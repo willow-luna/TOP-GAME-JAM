@@ -39,7 +39,7 @@ function answerQuestion(e) {
     function updateQuestion() {
 
         let txtQ = document.getElementById("txtQ");
-        document.getElementById("txtScore").textContent = "How aout this one?"
+        document.getElementById("txtScore").textContent = "How about this one?"
         txtQ.textContent = questions[round].quest;
         document.getElementById("txtAns").textContent = ".";
         

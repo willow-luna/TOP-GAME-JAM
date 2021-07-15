@@ -1,4 +1,7 @@
-body {
-
-    background-color: blueviolet;
+body{
+  background-color: black;  
+}
+header{
+    background-color: aqua;
+    padding: 20px;
 }

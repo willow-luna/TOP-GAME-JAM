@@ -1,7 +1,7 @@
 let round = 0;
 window.onload = firstQuestion();
 
-const numbers = document.querySelectorAll(".numbers");
+const numbers = document.querySelectorAll(".numberBtn");
     numbers.forEach((button) =>  button.addEventListener("click", answerQuestion));
     
 
@@ -19,7 +19,7 @@ function answerQuestion(e) {
                 ans : "4",
             },
         ];
-    document.getElementById("txtAns").textContent = answer;
+    document.getElementById("answer-screen").textContent = answer;
     checkAnswer();
 
     function checkAnswer() {
@@ -29,6 +29,7 @@ function answerQuestion(e) {
             document.getElementById("txtScore").textContent = "🎉 You got it right! Great Job! 🎉 ";
             setTimeout(updateQuestion, 4000);
             round++;
+            
         }
         else {
             document.getElementById("txtScore").textContent = "Not quite, try again!";
@@ -39,9 +40,10 @@ function answerQuestion(e) {
     function updateQuestion() {
 
         let txtQ = document.getElementById("txtQ");
+        document.getElementById("numScore").textContent = "Score: " + round;
         document.getElementById("txtScore").textContent = "How about this one?"
         txtQ.textContent = questions[round].quest;
-        document.getElementById("txtAns").textContent = ".";
+        document.getElementById("answer-screen").textContent = " ";
         
         console.log(txtQ.textContent);
     }

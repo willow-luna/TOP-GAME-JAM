@@ -4,6 +4,8 @@ window.onload = firstQuestion();
 const numbers = document.querySelectorAll(".numberBtn");
     numbers.forEach((button) =>  button.addEventListener("click", answerQuestion));
     
+document.getElementById("restart").addEventListener("click", restart);
+document.getElementById("quit").addEventListener("click", quit);
 
 
 function answerQuestion(e) {
@@ -52,4 +54,16 @@ function answerQuestion(e) {
 
 function firstQuestion() {
     document.getElementById("txtQ").textContent = "What is 1 + 1?";
+}
+
+function restart() {
+    window.location = window.location;
+}
+
+function quit() {
+    document.getElementById("txtScore").textContent = "Thanks for playing!"
+    document.getElementById("txtQ").textContent = "Okay!"
+    document.querySelectorAll("button.numberBtn").forEach(elem => {
+        elem.disabled = true;
+    });
 }

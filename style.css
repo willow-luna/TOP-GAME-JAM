@@ -6,18 +6,16 @@ header{
     padding: 20px;
     font-size: 40px;
 }
-input[type=submit]{
+.quit{
   background-color: rgba(238, 185, 220, 0.945);
-  width:50px;
-  height:20px;
+  width:70px;
   color: rgba(243, 14, 167, 0.945);
   
 }
 
-input[type=reset]{
+.Restart{
   background-color: rgba(186, 240, 228, 0.9);
-  width:70px;
-  height:20px;
+  width:120px;
   color: rgb(4, 100, 25);
 
 }

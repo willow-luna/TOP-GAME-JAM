@@ -42,7 +42,7 @@ button {
 }
 
 button:hover {
-  background-color: #eaeaea;
+  background-color: rgba(169, 211, 15, 0.89);
 }
 
   .Restart {

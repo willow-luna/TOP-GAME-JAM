@@ -5,6 +5,17 @@ header{
     background-color: aqua;
     padding: 20px;
 }
+input[type=submit]{
+  width:50px;
+  height:20px;
+  color: rgba(243, 14, 167, 0.945);
+}
+
+input[type=reset]{
+  width:70px;
+  height:20px;
+  color: rgb(4, 100, 25);
+}
 
 .answer-numbers{
   border: 1px solid rgba(169, 211, 15, 0.89);
@@ -44,16 +55,6 @@ button {
 button:hover {
   background-color: rgba(169, 211, 15, 0.89);
 }
-
-  .Restart {
-    background-color: rgb(244, 247, 75);
-    border-color: rgba(250, 205, 6, 0.89);
-    color: rgb(233, 102, 200);
-  }
-
-  .Restart:hover {
-    background-color: rgba(184, 124, 240, 0.979);
-  }
   
   .numbers {
     display: grid;

@@ -63,6 +63,7 @@ header{
   padding-right: 20px;
   padding-left: 10px;
   text-align: center;
+  align-content: inherit;
 }
 
 button {
@@ -95,6 +96,7 @@ button:hover {
   .Questions {
     grid-column: 3 / span 2;
     grid-row: row 2;
+    text-align: center;
     font-size: 60px;
   }
 

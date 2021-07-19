@@ -1,5 +1,7 @@
 let round = 0;
 window.onload = firstQuestion();
+let star = "⭐";
+let score = [];
 
 const numbers = document.querySelectorAll(".numberBtn");
     numbers.forEach((button) =>  button.addEventListener("click", answerQuestion));
@@ -20,6 +22,14 @@ function answerQuestion(e) {
                 quest : "What is 2 + 2?",
                 ans : "4",
             },
+            {
+                quest: "what's bigger, 1 or 2?",
+                ans : "2",
+            },
+            {
+                quest: "What's 2+2?",
+                ans : "4",
+            },
         ];
     document.getElementById("answer-screen").textContent = answer;
     checkAnswer();
@@ -31,6 +41,7 @@ function answerQuestion(e) {
             document.getElementById("txtScore").textContent = "🎉 You got it right! Great Job! 🎉 ";
             setTimeout(updateQuestion, 4000);
             round++;
+            updateScoreboard();
             
         }
         else {
@@ -42,12 +53,9 @@ function answerQuestion(e) {
     function updateQuestion() {
 
         let txtQ = document.getElementById("txtQ");
-        document.getElementById("numScore").textContent = "Score: " + round;
         document.getElementById("txtScore").textContent = "How about this one?"
         txtQ.textContent = questions[round].quest;
         document.getElementById("answer-screen").textContent = " ";
-
-        updateScoreboard();
         
         console.log(txtQ.textContent);
     }
@@ -55,7 +63,11 @@ function answerQuestion(e) {
 };
 
 function updateScoreboard() {
-    console.log(round);
+    score.push(star);
+    let newScore = score.join("");
+    document.getElementById("numScore").textContent = "Score: " + newScore;
+    console.log(star);
+    console.log(score.join()=== score);
 }
 
 function firstQuestion() {

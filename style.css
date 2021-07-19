@@ -16,7 +16,7 @@ header{
     color:rgba(10, 10, 10, 0.89);
   }
   .Quit{
-    grid-column: 1 / span 2;
+    grid-column: 1;
     grid-row: row;
     background-color: rgba(10, 10, 10, 0.89);
     width: 80px;

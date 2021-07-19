@@ -11,7 +11,7 @@ header{
     display: grid;
     grid-gap:20px;
     grid-template-columns: repeat(3, [col] 200px );
-    grid-template-rows: repeat(16, [row] auto );
+    grid-template-rows: repeat(4, [row] auto );
     background-color: rgb(236, 173, 226);
     color:rgba(10, 10, 10, 0.89);
   }
@@ -41,12 +41,12 @@ header{
   grid-template-columns: 1fr;
 }
 .answer-numbers{
-  grid-column: 3;
-  grid-row:row 2;
+  grid-column: 3 / span 2;
+  grid-row:row 3;
   border: 1px solid rgba(169, 211, 15, 0.89);
   border-radius: 20px;
   margin-top: 30px;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -105,7 +105,7 @@ button:hover {
 
   .scoreBoard {
     grid-column: 3/ span 2;
-    grid-row: row 16/ span 3;
+    grid-row: row 4/ span 3;
     text-align: center;
     font-size: 40px;
   }

@@ -17,7 +17,7 @@ function answerQuestion(e) {
                 ans : "2"
             },
             {
-                quest : "2 + 2",
+                quest : "What is 2 + 2?",
                 ans : "4",
             },
         ];

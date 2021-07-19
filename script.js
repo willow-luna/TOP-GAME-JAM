@@ -46,11 +46,17 @@ function answerQuestion(e) {
         document.getElementById("txtScore").textContent = "How about this one?"
         txtQ.textContent = questions[round].quest;
         document.getElementById("answer-screen").textContent = " ";
+
+        updateScoreboard();
         
         console.log(txtQ.textContent);
     }
 
 };
+
+function updateScoreboard() {
+    console.log(round);
+}
 
 function firstQuestion() {
     document.getElementById("txtQ").textContent = "What is 1 + 1?";

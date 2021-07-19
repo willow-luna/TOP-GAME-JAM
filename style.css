@@ -45,11 +45,8 @@ header{
   grid-row:row 3;
   border: 1px solid rgba(169, 211, 15, 0.89);
   border-radius: 20px;
-  margin-top: 30px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 40px;
+  align-content: center;
   width: 400px;
 }
 

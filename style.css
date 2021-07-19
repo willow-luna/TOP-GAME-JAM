@@ -11,7 +11,7 @@ header{
     display: grid;
     grid-gap:20px;
     grid-template-columns: repeat(3, [col] 200px );
-    grid-template-rows: repeat(4, [row] auto );
+    grid-template-rows: repeat(16, [row] auto );
     background-color: rgb(236, 173, 226);
     color:rgba(10, 10, 10, 0.89);
   }

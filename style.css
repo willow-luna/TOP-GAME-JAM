@@ -18,16 +18,18 @@ header{
   .Quit{
     grid-column: 1 / span 2;
     grid-row: row;
-    background-color: rgba(14, 1, 9, 0.945);
-    width:70px;
+    background-color: rgba(10, 10, 10, 0.89);
+    width: 80px;
+    height: 80px;
     color: rgba(233, 115, 115, 0.945);
     
   }
   .Restart{
     grid-column: 7;
-    grid-row: 🚣 row 1 ;
+    grid-row: row 1 ;
     background-color: rgba(186, 240, 228, 0.9);
     width:130px;
+    height: 50px;
     color: rgba(4, 100, 25, .9);
 
   }
@@ -42,7 +44,8 @@ header{
   grid-column: 3;
   grid-row:row 2;
   border: 1px solid rgba(169, 211, 15, 0.89);
-  border-radius: 5px;
+  border-radius: 20px;
+  margin-top: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -95,19 +98,21 @@ button:hover {
 
   .Questions {
     grid-column: 3 / span 2;
-    grid-row: row 2;
+    grid-row: row 2 / span 3;
     text-align: center;
     font-size: 60px;
   }
 
   .scoreBoard {
     grid-column: 1/ span 2;
-    grid-row: row 4;
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap:50px;
-    grid-column-gap: 20px;
+    grid-row: row 10/ span 3;
     font-size: 40px;
+  }
+  #txtScore{
+    grid-column: 1 / span 2;
+    grid-row: row 3;
+    font-size: 45px;
+    color:rgba(135, 58, 138, 0.945)
   }
 
 

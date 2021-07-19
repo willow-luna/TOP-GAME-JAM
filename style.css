@@ -26,7 +26,7 @@ header{
   }
   .Restart{
     grid-column: 7;
-    grid-row: row 1 ;
+    grid-row: row;
     background-color: rgba(186, 240, 228, 0.9);
     width:130px;
     height: 50px;

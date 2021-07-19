@@ -62,7 +62,7 @@ function restart() {
 
 function quit() {
     document.getElementById("txtScore").textContent = "Thanks for playing!"
-    document.getElementById("txtQ").textContent = "Okay!"
+    document.getElementById("txtQ").textContent = "See you next time!"
     document.querySelectorAll("button.numberBtn").forEach(elem => {
         elem.disabled = true;
     });

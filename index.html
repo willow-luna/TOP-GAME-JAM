@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edutainment</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="test.css">
     <script src="script.js"defer></script>
 </head>
 
 <body>
-<header>JAM Game Name</header>
 <div class="wrapper">
-<div class="Quit"> 
-    <button class= "Quit" id="quit">Quit</button>
-</div> 
+<header>JAM Game Name</header>
+
 
 <div class="Restart">
     <button class="Restart" id="restart">Restart</button>
 </div>
 
+<div class="Quit"> 
+    <button class= "Quit" id="quit">Quit</button>
+</div> 
+
 <div class="Questions">
     <div id="txtQ" class="Questions"></div>
-    <div id="txtAns" class="Questions"></div>
+    <div id="txtAns" class="Questions">0</div>
 </div>
+
+<div id="txtScore" class="scoreBoard">Click the the answer!</div>
 
     <div class="answer-numbers">
         <div id="answer-screen" class="answer-screen"></div>
@@ -41,11 +45,10 @@
     </div>
     </div>
 
-<div class="scoreBoard">
-    <div id="txtScore" class="scoreBoard">Click the the answer!</div>
-        <span id="numScore" class="scoreBoard">Score: </span>
+<div id="numScore" class="scoreBoard">Score: </div>
+
 </div>
-</div>
+
 
 </body>
 </html>

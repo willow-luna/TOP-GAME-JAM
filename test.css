@@ -1,0 +1,56 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 33vw);
+    grid-template-rows: repeat(6, 16.66vh);
+    grid-template-areas: 
+    "restart title quit"
+    ". txtQ ."
+    ". txtAns ."
+    ". txtScore ."
+    ". numbers ."
+    ". numScore .";
+}
+
+#restart {
+
+    grid-area: restart;
+}
+
+header {
+ 
+    grid-area: title;
+}
+
+#quit {
+
+    grid-area: quit;
+}
+
+#txtQ {
+
+    grid-area: txtQ;
+}
+
+#txtAns {
+ 
+    grid-area: txtAns;
+}
+
+.txtScore {
+
+    grid-area: txtScore;
+}
+
+.numScore {
+
+    grid-area: numScore;
+}
+
+.numbers {
+
+    grid-area: numbers;
+  }

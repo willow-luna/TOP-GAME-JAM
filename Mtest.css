@@ -1,0 +1,55 @@
+body, html {
+    height: 100vh;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 15% 80% 15%;
+    grid-template-rows: 15% 10% 10% 10% 30% 15% 10%;
+    grid-template-areas: 
+    "restart title quit"
+    ".. txtQ .."
+    ".. txtAns .."
+    ".. txtScore .."
+    ".. numbers .."
+    ".. numScore .."
+    ".. footer ..";
+}
+
+#restart {
+    grid-area: restart;
+}
+
+h1 {
+    grid-area: title;
+}
+
+#quit {
+    grid-area: quit;
+}
+
+h2 {
+    grid-area: txtQ;
+}
+
+h3 {
+    grid-area: txtAns;
+}
+
+h4 {
+    grid-area: txtScore;
+}
+
+span {
+    grid-area: numScore;
+}
+
+section {
+    grid-area: numbers;
+}
+
+footer {
+    grid-area: footer;
+}

@@ -6,7 +6,9 @@ let rainbow = "🌈";
 let dragon = "🐉";
 let unicorn = "🦄";
 let score = [];
+let scoreNum = 0;
 let bigScore = [];
+let levelScore = [];
 
 const numbers = document.querySelectorAll(".numberBtn");
     numbers.forEach((button) =>  button.addEventListener("click", answerQuestion));
@@ -127,13 +129,22 @@ function answerQuestion(e) {
 
     function checkAnswer() {
         let qAns  = questions[round].ans;
+        
         if (answer === qAns) {
-            document.getElementById("txtScore").textContent = "🎉 You got it right! Great Job! 🎉 ";
-            setTimeout(updateQuestion, 2000);
-            round++;
-            updateScoreboard();
-            updateStars();
-            
+            if (questions[round].questNum === questions.length -1){
+                document.getElementById("txtScore").textContent = "You did a great job!!"
+                document.getElementById("txtQ").textContent = "Can you do it again?"
+                
+                setTimeout(restart, 5000);
+            }
+            else {
+                document.getElementById("txtScore").textContent = "🎉 You got it right! Great Job! 🎉 ";
+                setTimeout(updateQuestion, 2000);
+                scoreNum++;
+                round++;
+                console.log(round);
+                updateScoreboard();
+            }
         }
         else {
             document.getElementById("txtScore").textContent = "Not quite, try again!";
@@ -153,18 +164,18 @@ function answerQuestion(e) {
 
 function updateScoreboard() {
     
-    if(questions[round].questNum % 5 === 0){
+    if(scoreNum % 5 === 0){
         score = [];
-            if(questions[round].questNum === "5") {
+            if(scoreNum === 5) {
                 bigScore.push(cloud);
             }
-            else if (questions[round].questNum === "10") {
+            else if (scoreNum === 10) {
                 bigScore.push(rainbow);
             }
-            else if (questions[round].questNum === "15") {
+            else if (scoreNum === 15) {
                 bigScore.push(dragon);
             }
-            else {
+            else if (scoreNum === 20) {
                 bigScore.push(unicorn);
             }
     }
@@ -194,3 +205,4 @@ function quit() {
         elem.disabled = true;
     });
 }
+

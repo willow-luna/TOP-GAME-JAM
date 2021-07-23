@@ -82,36 +82,37 @@ button {
 button:hover {
   background-color: rgba(169, 211, 15, 0.89);
 }
-  
-  .numbers {
-    grid-column: 3;
-    grid-row:row 2;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
 
-  }
+.numbers {
+  grid-column: 3;
+  grid-row:row 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+}
 
-  .Questions {
-    grid-column: 3 / span 2;
-    grid-row: row 2 / span 3;
-    text-align: left;
-    font-size: 60px;
-  }
+.Questions {
+  grid-column: 3 / span 2;
+  grid-row: row 2 / span 3;
+  text-align: left;
+  font-size: 60px;
+}
 
-  .scoreBoard {
-    grid-column: 3/ span 2;
-    grid-row: row 4/ span 3;
-    text-align: left;
-    font-size: 40px;
-  }
-  #txtScore{
-    grid-column: 1 / span 2;
-    grid-row: row 3;
-    font-size: 45px;
-    color:rgba(135, 58, 138, 0.945)
-  }
+.scoreBoard {
+  grid-column: 3/ span 2;
+  grid-row: row 4/ span 3;
+  text-align: left;
+  font-size: 40px;
+}
 
+#txtScore {
+  grid-column: 1 / span 2;
+  grid-row: row 3;
+  font-size: 45px;
+  color:rgba(135, 58, 138, 0.945)
+}
 
-
+.star {
+  font-size: 40px;
+}

@@ -23,15 +23,79 @@ function answerQuestion(e) {
                 ans : "4",
             },
             {
-                quest: "what's bigger, 1 or 2?",
+                quest: "Which is bigger, 1 or 2?",
                 ans : "2",
             },
             {
-                quest: "What's 2+2?",
-                ans : "4",
+                quest: "What comes AFTER 4?",
+                ans : "5",
+            },
+            {
+                quest: "What is 4 + 5?",
+                ans : "9",
+            },
+            {
+                quest: "What is 3 + 2?",
+                ans : "5",
+            },
+            {
+                quest: "What is 2 - 1?",
+                ans : "1",
+            },
+            {
+                quest: "What is 5 - 2?",
+                ans : "3",
+            },
+            {
+                quest: "What comes AFTER 7?",
+                ans : "8",
+            },
+            {
+                quest: "What comes AFTER 9?",
+                ans : "10",
+            },
+            {
+                quest: "What comes AFTER 2?",
+                ans : "3",
+            },
+            {
+                quest: "What comes BEFORE 3?",
+                ans : "2",
+            },
+            {
+                quest: "What is 9 + 1?",
+                ans : "10",
+            },
+            {
+                quest: "What is 9 - 3?",
+                ans : "6",
+            },
+            {
+                quest: "What is 10 - 5?",
+                ans : "5",
+            },
+            {
+                quest: "What is 8 - 6?",
+                ans : "2",
+            },
+            {
+                quest: "What is 1 + 9?",
+                ans : "10",
+            },
+            {
+                quest: "What is 5 - 4?",
+                ans : "1",
+            },
+            {
+                quest: "What is 7 + 3",
+                ans : "10",
+            },
+            {
+                quest: "What is 6 + 2?",
+                ans : "8",
             },
         ];
-    document.getElementById("answer-screen").textContent = answer;
+    document.getElementById("txtAns").textContent = answer;
     checkAnswer();
 
     function checkAnswer() {
@@ -39,7 +103,7 @@ function answerQuestion(e) {
         console.log(qAns);
         if (answer === qAns) {
             document.getElementById("txtScore").textContent = "🎉 You got it right! Great Job! 🎉 ";
-            setTimeout(updateQuestion, 4000);
+            setTimeout(updateQuestion, 2000);
             round++;
             updateScoreboard();
             
@@ -55,7 +119,7 @@ function answerQuestion(e) {
         let txtQ = document.getElementById("txtQ");
         document.getElementById("txtScore").textContent = "How about this one?"
         txtQ.textContent = questions[round].quest;
-        document.getElementById("answer-screen").textContent = " ";
+        document.getElementById("txtAns").textContent = "?";
         
         console.log(txtQ.textContent);
     }

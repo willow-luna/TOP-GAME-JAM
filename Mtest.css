@@ -1,12 +1,13 @@
 body, html {
     height: 100vh;
+    width: 70vh;
 }
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     display: grid;
-    grid-template-columns: 15% 80% 15%;
+    grid-template-columns: 15% 70% 15%;
     grid-template-rows: 15% 10% 10% 10% 30% 15% 10%;
     grid-template-areas: 
     "restart title quit"
@@ -36,6 +37,7 @@ h2 {
 
 h3 {
     grid-area: txtAns;
+
 }
 
 h4 {

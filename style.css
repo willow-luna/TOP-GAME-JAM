@@ -113,6 +113,6 @@ button:hover {
   color:rgba(135, 58, 138, 0.945)
 }
 
-.star {
-  font-size: 40px;
+#numScore {
+  font-size: 70px;
 }

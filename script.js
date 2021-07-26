@@ -144,10 +144,12 @@ function answerQuestion(e) {
                 round++;
                 console.log(round);
                 updateScoreboard();
+                playCheer();
             }
         }
         else {
             document.getElementById("txtScore").textContent = "Not quite, try again!";
+            playWrong();
         }
      
     };
@@ -206,3 +208,12 @@ function quit() {
     });
 }
 
+function playCheer() {
+    let cheer = new Audio("sounds/cheer2.wav");
+    cheer.play();
+};
+
+function playWrong() {
+    let wrong = new Audio("sounds/wrong1.wav");
+    wrong.play();
+};

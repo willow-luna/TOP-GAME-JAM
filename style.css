@@ -14,13 +14,13 @@ body{
   font-size: 25px;
   display: grid;
   grid-template-columns: 15% 70% 15%;
-  grid-template-rows: 15% 10% 10% 10% 30% 15% 5%;
+  grid-template-rows: 15% 10% 10% 30% 10% 15% 5%;
   grid-template-areas: 
   "restart title quit"
     ".. txtQ .."
     ".. txtAns .."
-    ".. txtScore .."
     ".. numbers .."
+    ".. txtScore .."
     ".. numScore .."
     ".. footer ..";
 }
@@ -32,6 +32,7 @@ body{
 }
 
 h1{
+   grid-area: title;
     height: 1fr;
     font-size: 1.7em;
     text-align: center;
@@ -49,8 +50,7 @@ h1{
   
 h2 {
     grid-area: txtQ;
-    grid-column: 2;
-    grid-row: 2;
+
     text-align: center;
     font-size: 1.7em;
     text-shadow:0 3px gold;
@@ -59,8 +59,7 @@ h2 {
 
 h3{
   grid-area: txtAns;
-  grid-column: 2;
-  grid-row: 3;
+
   font-size: 30px;
   text-align: center;
   padding-top: 3%;
@@ -87,8 +86,7 @@ button:hover {
 
 section {
   grid-area: numbers;
-  grid-column: 2;
-  grid-row: 5;
+
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-row-gap: .5fr;
@@ -99,24 +97,21 @@ section {
 
 h4 {
   grid-area: txtScore;
-  grid-column: 2;
-  grid-row: 6;
-  
-}
-.scoreBoard {
-  text-align: left;
-  font-size: 40px;
+  margin: .5em;
   color: rgb(9, 0, 10);
-  text-shadow: 0 2px gold;
   text-align: center;
+  text-shadow: 0 2px gold;
+  font-size: 1.4em;
 }
 
 span{
   grid-area: numScore;
-  grid-column: 2;
-  grid-row: 7;
   padding-top: 4%;
   text-shadow: 0 3px gold;
+  color: rgb(9, 0, 10);
+  text-align: center;
+  text-shadow: 0 2px gold;
+  font-size: 1.4em;
 }
 
 .star {
@@ -126,8 +121,6 @@ span{
 footer{
   grid-area: footer;
   padding-top: 5%;
-  grid-column: 1/span 3;
-  grid-row: 7;
   padding-bottom: 2%;
   text-align: center;
 }

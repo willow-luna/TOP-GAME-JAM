@@ -19,12 +19,13 @@ body{
   "restart title quit"
     ".. txtQ .."
     ".. txtAns .."
-    ".. txtScore .."
     ".. numbers .."
+    ".. txtScore .."
     ".. numScore .."
     ".. footer ..";
 }
 #restart{
+  grid-area: restart;
   background-color: rgba(186, 240, 228, 0.9);
   width:1fr;
   height: 1fr;
@@ -32,6 +33,7 @@ body{
 }
 
 h1{
+    grid-area: title;
     height: 1fr;
     font-size: 40px;
     text-align: center;
@@ -40,6 +42,7 @@ h1{
 
 
 #quit{
+    grid-area: quit;
     background-color: rgba(10, 10, 10, 0.89);
     width: 1fr;
     height: 1fr;
@@ -101,6 +104,7 @@ h4 {
   grid-area: txtScore;
   grid-column: 2;
   grid-row: 6;
+  text-align: center;
   
 }
 .scoreBoard {
@@ -109,13 +113,14 @@ h4 {
   color: rgb(9, 0, 10);
   text-shadow: 0 2px gold;
   text-align: center;
+
 }
 
 span{
   grid-area: numScore;
   grid-column: 2;
   grid-row: 7;
-  padding-top: 4%;
+  text-align: center;
   text-shadow: 0 3px gold;
 }
 

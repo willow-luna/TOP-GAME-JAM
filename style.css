@@ -1,56 +1,79 @@
-body{
-  background-color: rgba(238, 185, 220, 0.945);  
-}
-header{
-    background-color: aqua;
-    padding: 20px;
-    font-size: 40px;
+body, html{
+  height: 100vh;
+  width:100vw;
+  background-image: url("https://thumbs.dreamstime.com/b/cloud-sky-pastel-rainbow-colored-background-means-color-gradation-abstract-cloud-sky-pastel-rainbow-182688187.jpg");
+  background-repeat: no repeat;
+  background-attachment: scroll;
+
 }
 
-  .wrapper{
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 15% 80% 15%;
+  grid-template-rows: 15% 10% 10% 10% 30% 15% 10% 15%;
+  row-gap: 2rem;
+  grid-template-areas: 
+  "restart title quit"
+    ".. txtQ .."
+    ".. txtAns .."
+    ".. txtScore .."
+    ".. numbers .."
+    ".. numScore .."
+    ".. footer ..";
+}
+#restart{
+  background-color: rgba(186, 240, 228, 0.9);
+  width:1fr;
+  height: 1fr;
+  color: rgba(4, 100, 25, .9);
+}
+
+h1{
+    height: 1fr;
+    font-size: 40px;
+    text-align: center;
+    color: red;
+}
+
+  /*.wrapper{
     display: grid;
     grid-gap:30px;
     grid-template-columns: repeat(3, [col] 200px );
     grid-template-rows: repeat(4, [row] auto );
     background-color: rgb(236, 173, 226);
     color:rgba(10, 10, 10, 0.89);
-  }
-  .Quit{
-    grid-column: 1;
-    grid-row: row;
+  }*/
+
+#quit{
     background-color: rgba(10, 10, 10, 0.89);
-    width: 80px;
-    height: 80px;
+    width: 1fr;
+    height: 1fr;
     color: rgba(233, 115, 115, 0.945);
     
   }
-  .Restart{
-    grid-column: 7;
-    grid-row: row;
-    background-color: rgba(186, 240, 228, 0.9);
-    width:130px;
-    height: 50px;
-    color: rgba(4, 100, 25, .9);
-
+  
+h2 {
+    grid-area: txtQ;
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    font-size: 60px;
+    
   }
-.game-answer{
-  grid-column: 2 / span 2;
-  grid-row: row 2;
-  display:grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr;
-}
-.answer-numbers{
-  grid-column: 3 / span 2;
-  grid-row:row 3;
-  border: 1px solid rgba(169, 211, 15, 0.89);
-  border-radius: 40px;
-  margin-top: 40px;
-  align-content: center;
-  width: 400px;
+
+h3{
+  grid-area: txtAns;
+  grid-column: 2;
+  grid-row: 3;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 2rem;
 }
 
-.answer-screen{
+
+/*.answer-screen{
   grid-column: 3;
   grid-row:row 2;
   width: 100%;
@@ -64,10 +87,10 @@ header{
   padding-left: 10px;
   text-align:center;
   align-content: center;
-}
+}*/
 
 button {
-  height: 60px;
+  height: 5rem;
   background-color:aquamarine;
   border-radius: 3px;
   border: 1px solid rgba(50, 21, 212, 0.815);
@@ -83,36 +106,43 @@ button:hover {
   background-color: rgba(169, 211, 15, 0.89);
 }
 
-.numbers {
-  grid-column: 3;
-  grid-row:row 2;
+section {
+  grid-area: numbers;
+  grid-column: 2;
+  grid-row: 5;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-row-gap: 20px;
-  grid-column-gap: 20px;
+  grid-row-gap: .5rem;
+  grid-column-gap: .5rem;
 }
 
-.Questions {
-  grid-column: 3 / span 2;
-  grid-row: row 2 / span 3;
-  text-align: left;
-  font-size: 60px;
-}
 
+h4 {
+  grid-area: txtScore;
+  grid-column: 2;
+  grid-row: 6;
+  
+}
 .scoreBoard {
-  grid-column: 3/ span 2;
-  grid-row: row 4/ span 3;
   text-align: left;
   font-size: 40px;
+  text-align: center;
 }
 
-#txtScore {
-  grid-column: 1 / span 2;
-  grid-row: row 3;
-  font-size: 45px;
-  color:rgba(135, 58, 138, 0.945)
+span{
+  grid-area: numScore;
+  grid-column: 2;
+  grid-row: 7;
+  padding-top: 2rem;
 }
 
 .star {
   font-size: 40px;
+}
+
+footer{
+  grid-area: footer;
+  padding-top: 2rem;
+  grid-column: 1/span 3;
+  grid-row: 8;
 }

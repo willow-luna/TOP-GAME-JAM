@@ -14,7 +14,7 @@ body{
   margin: 0;
   display: grid;
   grid-template-columns: 15% 70% 15%;
-  grid-template-rows: 15% 10% 10% 10% 30% 15% 10%;
+  grid-template-rows: 15% 15% 10% 30% 10% 15% 5%;
   grid-template-areas: 
   "restart title quit"
     ".. txtQ .."
@@ -130,8 +130,5 @@ span{
 
 footer{
   grid-area: footer;
-  padding-top: 5%;
-  grid-column: 1/span 3;
-  grid-row: 7;
-  padding-bottom: 2%;
+  
 }

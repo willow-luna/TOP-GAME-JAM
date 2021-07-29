@@ -28,7 +28,7 @@ body{
 #restart{
   grid-area: restart;
   background-color: rgba(186, 240, 228, 0.9);
-  width:1fr;
+  width: auto;
   height: 1fr;
   color: rgba(4, 100, 25, .9);
 }
@@ -85,8 +85,7 @@ section {
   grid-area: numbers;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-row-gap: .5fr;
-  grid-column-gap: .5fr;
+  gap: .5em;
   padding-top: 1fr;
 }
 
@@ -94,7 +93,7 @@ section {
 h4 {
   grid-area: txtScore;
   text-align: center;
-  text-shadow: 0 3px gold;
+  text-shadow: 0 3px rgb(238, 231, 189);
   color: rgb(9, 0, 10);
   font-size: 1.1em;
 }
@@ -102,7 +101,7 @@ h4 {
 span{
   grid-area: numScore;
   margin: auto;
-  text-shadow: 0 3px gold;
+  text-shadow: 0 3px rgb(236, 230, 197);
   color: rgb(9, 0, 10);
   text-align: center;
 }

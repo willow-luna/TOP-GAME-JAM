@@ -138,12 +138,12 @@ function answerQuestion(e) {
                 setTimeout(restart, 5000);
             }
             else {
-                document.getElementById("txtScore").textContent = "🎉 You got it right! Great Job! 🎉 ";
-                setTimeout(updateQuestion, 2000);
+                document.getElementById("txtScore").textContent = "🎉 You got it right! Great job! 🎉 ";
+                setTimeout(updateScoreboard, 4000)
+                setTimeout(updateQuestion, 7000);
                 scoreNum++;
                 round++;
                 console.log(round);
-                updateScoreboard();
                 playCheer();
             }
         }
@@ -169,19 +169,34 @@ function updateScoreboard() {
     if(scoreNum % 5 === 0){
         score = [];
             if(scoreNum === 5) {
+                document.getElementById("txtScore").textContent = "⭐ + ⭐ + ⭐ + ⭐ + ⭐ = 🌥️";
+                let cloudSnd = new Audio("sounds/cloud.wav");
+                cloudSnd.play();
                 bigScore.push(cloud);
             }
             else if (scoreNum === 10) {
+                document.getElementById("txtScore").textContent = "🌥️ + ⭐ + ⭐ + ⭐ + ⭐ + ⭐ = 🌈";
+                let rainbowSnd = new Audio("sounds/rainbow.wav");
+                rainbowSnd.play();
                 bigScore.push(rainbow);
             }
             else if (scoreNum === 15) {
+                document.getElementById("txtScore").textContent = "🌥️ + 🌈 + ⭐ + ⭐ + ⭐ + ⭐ + ⭐ = 🐉";
+                let dragonSnd = new Audio("sounds/dragon.wav");
+                dragonSnd.play();
                 bigScore.push(dragon);
             }
             else if (scoreNum === 20) {
+                document.getElementById("txtScore").textContent = "🌥️ + 🌈 + 🐉 + ⭐ + ⭐ + ⭐ + ⭐ + ⭐ = 🦄";
+                let unicornSnd = new Audio("sounds/unicorn.wav");
+                unicornSnd.play();
                 bigScore.push(unicorn);
             }
     }
     else {
+        document.getElementById("txtScore").textContent = "Have a star!";
+        let starSnd = new Audio("sounds/star.wav");
+        starSnd.play();
         score.push(star);
     }
 
@@ -209,11 +224,13 @@ function quit() {
 }
 
 function playCheer() {
-    let cheer = new Audio("sounds/cheer2.wav");
-    cheer.play();
+    let cheer = [new Audio("sounds/cheer2.wav"), new Audio("sounds/cheer3.wav"), new Audio("sounds/hooDoggy.wav")];
+    let index = Math.floor(Math.random() * 3);
+    cheer[index].play();
 };
 
 function playWrong() {
-    let wrong = new Audio("sounds/wrong1.wav");
-    wrong.play();
+    let wrong = [new Audio("sounds/wrong1.wav"), new Audio("sounds/wrong2.wav"), new Audio("sounds/sadTrombone.wav")];
+    let index = Math.floor(Math.random() * 3);
+    wrong[index].play();
 };

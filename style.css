@@ -103,9 +103,10 @@ h4 {
 span{
   grid-area: numScore;
   margin: auto;
-  text-shadow: 0 3px rgb(236, 230, 197);
-  color: rgb(9, 0, 10);
+  text-shadow: 0 3px rgb(7, 6, 4);
+  color: yellow;
   text-align: center;
+  font-size: 30px;
 }
 
 .star {

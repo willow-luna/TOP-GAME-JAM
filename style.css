@@ -36,7 +36,9 @@ body{
 h1{
     grid-area: title;
     text-align: center;
-    color: rgb(175, 4, 161);
+    color: rgb(49, 1, 45);
+    text-shadow: 0 3px rgb(160, 148, 148);
+    text-decoration: solid underline purple 6px;
 }
 
 

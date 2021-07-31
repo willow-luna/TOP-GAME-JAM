@@ -116,6 +116,7 @@ span{
 footer{
   grid-area: footer;
   text-align: center;
+  font-size: 15px;
 }
 
 @media (max-width: 936px) {

@@ -45,7 +45,7 @@ h1{
 #quit{
     grid-area: quit;
     background-color: rgba(10, 10, 10, 0.89);
-    color: rgba(233, 115, 115, 0.945);
+    color: rgba(238, 6, 6, 0.945);
     
   }
   
@@ -53,7 +53,7 @@ h2 {
     grid-area: txtQ;
     text-align: center;
     font-size: 1.7em;
-    text-shadow:0 3px rgb(241, 241, 237);
+    text-shadow:0 4px rgb(160, 148, 148);
     margin: .5em;
   }
 
@@ -62,7 +62,7 @@ h3{
   font-size: 1.5em;
   text-align: center;
   margin: .5em;
-  text-shadow: 0 3px rgb(252, 251, 249);
+  text-shadow: 0 4px rgb(160, 148, 148);
 }
 
 
@@ -76,7 +76,7 @@ button {
   color: rgba(248, 117, 10, 0.9);
   background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(87, 184, 230, 0.9));
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(42, 177, 148, 0.9), inset 0 -1px 0 0 rgba(169, 211, 15, 0.89), 0 1px 0 0 rgba(117, 112, 112, 0.712);
-  text-shadow: 0 1px rgb(198, 229, 241);
+  text-shadow: 0 3px rgb(160, 148, 148);
 }
 
 button:hover {
@@ -95,7 +95,7 @@ section {
 h4 {
   grid-area: txtScore;
   text-align: center;
-  text-shadow: 0 3px rgb(238, 231, 189);
+  text-shadow: 0 4px rgb(160, 148, 148);
   color: rgb(9, 0, 10);
   font-size: 1.1em;
 }
@@ -103,8 +103,8 @@ h4 {
 span{
   grid-area: numScore;
   margin: auto;
-  text-shadow: 0 3px rgb(7, 6, 4);
-  color: yellow;
+  text-shadow: 0 3px rgb(2, 2, 2);
+  color: rgb(222, 247, 3);
   text-align: center;
   font-size: 30px;
 }

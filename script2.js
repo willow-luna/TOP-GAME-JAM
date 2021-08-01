@@ -9,6 +9,10 @@ let score = [];
 let scoreNum = 0;
 let bigScore = [];
 let levelScore = [];
+window.onload = document.body.style.backgroundImage = "url('images/milky-way-2695569_1280.jpg')";
+window.onload = document.body.style.backgroundRepeat = "no-repeat";
+window.onload = document.body.style.backgroundSize = "cover";
+
 
 const numbers = document.querySelectorAll(".numberBtn");
     numbers.forEach((button) =>  button.addEventListener("click", answerQuestion));
@@ -201,7 +205,7 @@ function updateScoreboard() {
     }
 
     let newScore = bigScore.join("") + score.join("");
-    document.getElementById("numScore").textContent = "Score: " + newScore;
+    document.getElementById("numScore").textContent = "Score: 🌥️🌈🐉🦄" + newScore;
     
 }
 

@@ -1,3 +1,6 @@
+window.onload = levelTwo();
+
+
 let round = 0;
 window.onload = firstQuestion();
 let star = "⭐";
@@ -9,9 +12,24 @@ let score = [];
 let scoreNum = 0;
 let bigScore = [];
 let levelScore = [];
-window.onload = document.body.style.backgroundImage = "url('images/milky-way-2695569_1280.jpg')";
-window.onload = document.body.style.backgroundRepeat = "no-repeat";
-window.onload = document.body.style.backgroundSize = "cover";
+
+
+function levelTwo() {
+    document.body.style.backgroundImage = "url('images/milky-way-2695569_1280.jpg')";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+
+    let fonts = document.querySelectorAll(".lvl1");
+    fonts.forEach((elem) => elem.classList.add("lvl2"));
+
+    let one = document.getElementById("levelOne");
+    one.remove();
+
+    let questList = document.createElement("script");
+    questList.setAttribute("src", "questions2.js");
+    document.body.appendChild(questList);
+
+}
 
 
 const numbers = document.querySelectorAll(".numberBtn");
@@ -20,108 +38,7 @@ const numbers = document.querySelectorAll(".numberBtn");
 document.getElementById("restart").addEventListener("click", restart);
 document.getElementById("quit").addEventListener("click", quit);
 
-let questions = [
-    {
-        questNum: "1",
-        quest : "",
-        ans : ""
-    },
-    {
-        questNum: "2",
-        quest : "",
-        ans : "",
-    },
-    {
-        questNum: "3",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "4",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "5",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "6",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "7",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "8",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "9",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "10",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "11",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "12",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "13",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "14",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "15",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "16",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "17",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "18",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "19",
-        quest: "",
-        ans : "",
-    },
-    {
-        questNum: "20",
-        quest: "",
-        ans : "",
-    },
-];
+//questions went here
 
 
 function answerQuestion(e) {

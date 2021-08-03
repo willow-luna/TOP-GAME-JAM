@@ -1,3 +1,11 @@
+let round = 0;
+window.onload = firstQuestion();
+let star = "⭐";
+let fairy = "🧚‍♀️"; 
+let sunflowr = "🌻";
+let horse = "🐴 ";
+let butterfly = "🦋";
+
 let questions = [
     {
         questNum: "1",
@@ -100,3 +108,44 @@ let questions = [
         ans : "2",
     },
 ];
+
+function updateScoreboard() {
+    
+    if(scoreNum % 5 === 0){
+        score = [];
+            if(scoreNum === 5) {
+                document.getElementById("txtScore").textContent = "🌥️ + 🌈 + 🐉 + ⭐ + ⭐ + ⭐ + ⭐ + ⭐ = 🧚‍♀️";
+                let cloudSnd = new Audio("sounds/cloud.wav");
+                cloudSnd.play();
+                bigScore.push(cloud);
+            }
+            else if (scoreNum === 10) {
+                document.getElementById("txtScore").textContent = "🌥️ + 🌈 + 🐉 + 🧚‍♀️ + ⭐ + ⭐ + ⭐ + ⭐ + ⭐ = 🌻";
+                let rainbowSnd = new Audio("sounds/rainbow.wav");
+                rainbowSnd.play();
+                bigScore.push(rainbow);
+            }
+            else if (scoreNum === 15) {
+                document.getElementById("txtScore").textContent = "🌥️ + 🌈 + 🐉 + 🧚‍♀️ + 🌻 + ⭐ + ⭐ + ⭐ + ⭐ + ⭐  = 🐴 ";
+                let dragonSnd = new Audio("sounds/dragon.wav");
+                dragonSnd.play();
+                bigScore.push(dragon);
+            }
+            else if (scoreNum === 20) {
+                document.getElementById("txtScore").textContent = "🌥️ + 🌈 + 🐉 + 🧚‍♀️ + 🌻 + 🐴  + ⭐ + ⭐ + ⭐ + ⭐ + ⭐  = 🦋";
+                let unicornSnd = new Audio("sounds/unicorn.wav");
+                unicornSnd.play();
+                bigScore.push(unicorn);
+            }
+    }
+    else {
+        document.getElementById("txtScore").textContent = "Have a star!";
+        let starSnd = new Audio("sounds/star.wav");
+        starSnd.play();
+        score.push(star);
+    }
+
+    let newScore = bigScore.join("") + score.join("");
+    document.getElementById("numScore").textContent = "Score: " + newScore;
+    
+}

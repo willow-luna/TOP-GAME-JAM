@@ -25,6 +25,7 @@ body{
     ".. numScore .."
     ".. footer ..";
 }
+
 #restart{
   grid-area: restart;
   background-color: rgba(186, 240, 228, 0.9);
@@ -34,28 +35,28 @@ body{
 }
 
 h1{
-    grid-area: title;
-    text-align: center;
-    color: rgb(49, 1, 45);
-    text-shadow: 0 3px rgb(160, 148, 148);
-    text-decoration: solid underline purple 6px;
+  grid-area: title;
+  text-align: center;
+  color: rgb(49, 1, 45);
+  text-shadow: 0 3px rgb(160, 148, 148);
+  text-decoration: solid underline purple 6px;
 }
 
 
 #quit{
-    grid-area: quit;
-    background-color: rgba(10, 10, 10, 0.89);
-    color: rgba(238, 6, 6, 0.945);
-    
-  }
+  grid-area: quit;
+  background-color: rgba(10, 10, 10, 0.89);
+  color: rgba(238, 6, 6, 0.945);
+  
+}
   
 h2 {
-    grid-area: txtQ;
-    text-align: center;
-    font-size: 1.7em;
-    text-shadow:0 4px rgb(160, 148, 148);
-    margin: .5em;
-  }
+  grid-area: txtQ;
+  text-align: center;
+  font-size: 1.7em;
+  text-shadow:0 4px rgb(160, 148, 148);
+  margin: .5em;
+}
 
 h3{
   grid-area: txtAns;

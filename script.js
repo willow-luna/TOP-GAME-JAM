@@ -137,14 +137,14 @@ function answerQuestion(e) {
         
         if (answer === qAns) {
             if (Number(questions[round].questNum) === questions.length){
-                document.getElementById("txtScore").textContent = "You did a great job!!"
-                document.getElementById("txtQ").textContent = "Ready for level 2?"
+                document.getElementById("txtScore").textContent = "You did a great job!!";
+                document.getElementById("txtQ").textContent = "Ready for level 2?";
                 
                 setTimeout(lvlTwo, 5000);
             }
             else {
                 document.getElementById("txtScore").textContent = "🎉 You got it right! Great job! 🎉 ";
-                setTimeout(updateScoreboard, 4000)
+                setTimeout(updateScoreboard, 4000);
                 setTimeout(updateQuestion, 7000);
                 scoreNum++;
                 round++;

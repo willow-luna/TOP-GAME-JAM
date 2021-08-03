@@ -1,3 +1,6 @@
+//TODO: alter script 2 so it can be added without needing script 1 to be deleted. 
+//TODO: Or actually test if deleting script 1 then adding script 2 actually doesn't work.
+
 let round = 0;
 window.onload = updateQuestion();
 //window.onload = firstQuestion();

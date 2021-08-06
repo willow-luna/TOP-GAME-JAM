@@ -9,7 +9,6 @@ let score = [];
 let scoreNum = 0;
 let bigScore = [];
 let levelScore = [];
-//window.onload = updateQuestion();
 
 function firstQuestion() {
     document.getElementById("txtQ").textContent = "What is 1 + 1?";
@@ -136,13 +135,7 @@ function answerQuestion(e) {
         let qAns  = questions[round].ans;
         
         if (answer === qAns) {
-            if (Number(questions[round].questNum) === questions.length){
-                document.getElementById("txtScore").textContent = "You did a great job!!";
-                document.getElementById("txtQ").textContent = "Ready for level 2?";
-                
-                setTimeout(lvlTwo, 5000);
-            }
-            else {
+            
                 document.getElementById("txtScore").textContent = "🎉 You got it right! Great job! 🎉 ";
                 setTimeout(updateScoreboard, 4000);
                 setTimeout(updateQuestion, 7000);
@@ -150,7 +143,10 @@ function answerQuestion(e) {
                 round++;
                 console.log(round);
                 playCheer();
-            }
+
+                if (Number(questions[round].questNum) === questions.length){
+                    setTimeout(final, 5000);
+                }
         }
         else {
             document.getElementById("txtScore").textContent = "Not quite, try again!";
@@ -158,6 +154,12 @@ function answerQuestion(e) {
         }
      
     };
+
+    function final() {
+        document.getElementById("txtScore").textContent = "You did a great job!!";
+        document.getElementById("txtQ").textContent = "Can you do it again?";
+        setTimeout(restart, 5000);
+    }
 
     function updateQuestion() {
 
@@ -233,9 +235,3 @@ function playWrong() {
     let index = Math.floor(Math.random() * 3);
     wrong[index].play();
 };
-
-function lvlTwo() {
-    let two = document.createElement("script");
-    two.setAttribute("src", "script2.js");
-    document.body.appendChild(two);
-}

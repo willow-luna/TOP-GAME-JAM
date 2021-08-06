@@ -146,7 +146,6 @@ function updateScoreboard() {
         let newScore = bigScore.join("") + score.join("");
         document.getElementById("numScore").textContent = "Score: 🌥️🌈🐉🦄" + newScore;
     }
-
 }
 
 
